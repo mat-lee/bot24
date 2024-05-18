@@ -1,3 +1,6 @@
 ui_port=8888
 
-ui_dir_assets=${PWD}/assets
+ui_dir_assets=${PWD}/a_ts_assets
+ui_assets=${PWD}/a_ts_assets
+# diary
+ui_assets_y24m05d08=${ui_assets}/y24/m05/d08
