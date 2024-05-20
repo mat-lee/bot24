@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Python tests in board24c" type="tests" factoryName="Autodetect" nameIsGenerated="true">
+  <configuration default="false" name="tst_board24a" type="tests" factoryName="Autodetect">
     <module name="pyc0514bot" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
@@ -9,7 +9,7 @@
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <option name="_new_additionalArguments" value="&quot;&quot;" />
-    <option name="_new_target" value="&quot;$PROJECT_DIR$/../../../k5/pyc0514bot/dbc24/tst/hello/board24c/&quot;" />
+    <option name="_new_target" value="&quot;$PROJECT_DIR$/../../../k5/pyc0514bot/dbc24/tst/hello/board24a/&quot;" />
     <option name="_new_targetType" value="&quot;PATH&quot;" />
     <method v="2" />
   </configuration>

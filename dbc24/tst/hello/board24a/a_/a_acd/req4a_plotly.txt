@@ -1,0 +1,3 @@
+xsdash
+plotly
+dash-bootstrap-components
