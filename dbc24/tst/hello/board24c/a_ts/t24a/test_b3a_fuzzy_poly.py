@@ -14,7 +14,7 @@ from polyfuzz import PolyFuzz
 # @pytest.mark.skip
 class TestFuzzyPoly2a:
 
-    fuzzy_approaches=['tfidf', 'embeddings']
+    fuzzy_approaches=['TF-IDF', 'Embeddings', 'EditDistance']
     uid_attr_list = [ 'uid_file_a_name', 'uid_file_b_name', 'uid_file_c_name', 'uid_file_d_name', 'uid_file_e_name',
                       'uid_table_a_div', 'uid_table_b_div', 'uid_table_c_div', 'uid_table_d_div', 'uid_table_e_div',
                       'uid_table_f_div', 'uid_table_g_div',
@@ -119,19 +119,32 @@ class TestFuzzyPoly2a:
                                         page_size=10),
 
         #
-        # State(self.uid_button_e, 'n_clicks_timestamp')
+
         @cls_arg.callback(
             [
                 Output(self.uid_table_f_div, 'children'),
                 Output(self.uid_table_g_div, 'children')
             ],
             Input(self.uid_button_e, 'n_clicks'),
+            State(self.uid_file_a_name, 'value'),
+            State(self.uid_file_c_name, 'value'),
+            State(self.uid_file_b_name, 'value')
         )
-        def on_click(n_clicks):
+        def on_click(n_clicks, file_a_name_value, file_c_name_value, model_type):
 
-            from_list = ["apple", "apples", "appl", "recal", "house", "similarity"]
-            to_list = ["apple", "apples", "mouse"]
-            model = PolyFuzz("TF-IDF").match(from_list, to_list)
+            # from_list = ["apple", "apples", "appl", "recal", "house", "similarity"]
+            # to_list = ["apple", "apples", "mouse"]
+
+            file_a_path = os.path.join( self.f_loc, file_a_name_value )
+            file_a_df = pd.read_json(file_a_path)
+
+            file_c_path = os.path.join( self.f_loc, file_c_name_value )
+            file_c_df = pd.read_json(file_c_path)
+
+            from_list = file_a_df[0].to_list()
+            to_list = file_c_df[0].to_list()
+
+            model = PolyFuzz(model_type).match(from_list, to_list)
             df = model.get_matches()
 
             t1 =  dash_table.DataTable(data=df.to_dict('records'),
