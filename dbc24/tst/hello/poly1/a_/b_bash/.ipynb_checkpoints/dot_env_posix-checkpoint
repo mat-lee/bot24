@@ -1,0 +1,40 @@
+#  Working Directory
+WORK_DIR=${PWD}
+
+#
+# [] Anaconda
+#
+ACD_ENV=p9240604pfuz
+ACD_ENV_NEW=p9601pf
+ACD_ENV_NEW_CLONE=p9
+ACD_ENV_NEW_PIP_LOC=${PWD}'/a_/a_acd/pip'
+
+
+#
+# [] Flask
+#
+FLASK_APP=my_app
+FLASK_ENV=development
+FLASK_DEBUG=1
+DATABASE_URL=sqlite:///${PWD}/a_ui/my_app.sqlite
+SECRET_KEY=my_secret
+FLASK_RUN_HOST=0.0.0.0
+FLASK_RUN_PORT=9008
+
+FLASK_STATIC_DIR=${PWD}/a_/t_template
+FLASK_TEMPLATE_DIR=${PWD}/a_/s_static
+
+#
+#
+#
+MY_DAT=${PWD}/../../../
+SEED_XLSX=my_app.xlsx
+SEED_XLSX_FULL_PATH=${PWD}/a_ui/u
+
+DIARY_Y240507=${PWD}/a_/d_diary/y24/m05/d07/
+DIARY_Y240508=${PWD}/a_/d_diary/y24/m05/d08/
+
+
+
+
+
