@@ -1,0 +1,18 @@
+# 
+flask
+# form
+flask-wtf
+#
+sqlalchemy
+sqlalchemy-migrate
+flask-sqlalchemy
+flask-migrate
+#
+flask-login
+email-validator
+#
+requests
+# facelift
+bootstrap-flask
+#
+faker
