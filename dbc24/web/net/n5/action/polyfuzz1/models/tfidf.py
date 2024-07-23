@@ -7,7 +7,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from .utils import cosine_similarity
 from .base import BaseMatcher
 
-
 class TFIDF(BaseMatcher):
     """
     A character based n-gram TF-IDF to approximate edit distance
