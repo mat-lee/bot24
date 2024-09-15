@@ -1,0 +1,3 @@
+WORK_DIR=${PWD}
+WORK_EXP=${WORK_DIR}/../..
+WORK_DAT=${PWD}/../../../dat/
